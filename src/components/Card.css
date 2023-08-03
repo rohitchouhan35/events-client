@@ -1,0 +1,58 @@
+/* In Card.css (create a new CSS file for the Card component) */
+.event-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 90%;
+  }
+  
+  .event-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .event-details {
+    padding: 20px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-info p {
+    margin-bottom: 8px;
+  }
+  
+  /* Media query for portrait view */
+  @media (max-width: 768px) {
+    .event-card {
+      flex-direction: row;
+      width: 80%;
+    }
+  
+    .event-image {
+      flex: 0 0 40%;
+    }
+  
+    .event-details {
+      flex: 1;
+    }
+  
+    .event-image img {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  
+  

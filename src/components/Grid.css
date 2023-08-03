@@ -1,0 +1,23 @@
+/* In Grid.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 10px; /* Gap between cards */
+    padding: 30px;
+  }
+  
+  /* For tablets (768px) */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+      padding: 5px;
+    }
+  }
+  
+  /* For phones (576px) */
+  @media (max-width: 576px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 card per row */
+    }
+  }
+  
