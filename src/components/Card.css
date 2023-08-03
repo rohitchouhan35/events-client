@@ -9,6 +9,11 @@
     margin-bottom: 20px;
     overflow: hidden;
     width: 90%;
+    transition: transform 0.1s;
+  }
+
+  .event-card:hover {
+    transform: scale(1.05); /* Increase the size on hover (you can adjust the scaling factor as needed) */
   }
   
   .event-image img {
@@ -35,7 +40,6 @@
   /* Media query for portrait view */
   @media (max-width: 768px) {
     .event-card {
-      flex-direction: row;
       width: 80%;
     }
   
@@ -53,6 +57,18 @@
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
+  }
+
+  .info-section {
+    display: flex;
+  }
+
+  .date-info {
+    width: 20%;
+  }
+
+  .name-info {
+    width: 80%;
   }
   
   
