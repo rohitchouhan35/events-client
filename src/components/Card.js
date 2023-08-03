@@ -5,7 +5,7 @@ const Card = ({ event }) => {
   const [imageError, setImageError] = useState(false);
 
   const fallbackImage =
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwsrmtZlb0Bn_ARxNWoLw0Ke9eTybjTcKS_Q&usqp=CAU';
+    'https://static.businessworld.in/article/article_extra_large_image/1566790917_Um2lHl_events.jpg';
 
   const image_url = imageError ? fallbackImage : event.banner_image || fallbackImage;
 

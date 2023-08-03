@@ -1,11 +1,16 @@
 import './App.css';
-import Grid from './components/Grid';
+import Home from './pages/Home';
+import Eventform from './components/Eventform';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1>Allevents</h1>
-      <Grid />
+      <Routes>
+        {/* Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/addevent" element={<Eventform />} />
+      </Routes>
     </div>
   );
 }
