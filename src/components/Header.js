@@ -26,7 +26,7 @@ const Header = () => {
           <button onClick={handleCreate} className="create-event-button">Create Event</button>
         </div>
         <div>
-        <NavLink to="" key="addevent">
+        <NavLink to="https://accounts.google.com/o/oauth2/v2/auth?response_type=code&access_type=online&client_id=224762843069-o6jpcp7unjcf4h519fjr8v6qk6b2jo1h.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&state&scope=profile%20email&approval_prompt=auto" key="addevent">
         <button className="signin-button">Sign in</button>
         </NavLink>
         </div>
