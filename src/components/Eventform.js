@@ -65,7 +65,7 @@ const Eventform = () => {
               name="start_time"
               value={data.start_time}
               onChange={handleChange}
-              // required
+              required
             />
           </div>
 
@@ -77,7 +77,7 @@ const Eventform = () => {
               name="end_time"
               value={data.end_time}
               onChange={handleChange}
-              // required
+              required
             />
           </div>
 
