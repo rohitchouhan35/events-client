@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { useEffect, useState } from 'react';
 import eventService from '../services/eventData';
-import './Grid.css'; // Import the CSS file for Grid component
+import './Grid.css'; 
 
 const Grid = () => {
   const [eventList, setEventList] = useState([]);
