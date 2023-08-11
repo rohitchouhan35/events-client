@@ -1,5 +1,5 @@
 import React from 'react';
-import './Homesection.css';
+import './Body.css';
 import { useEffect, useState } from 'react';
 
 const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {

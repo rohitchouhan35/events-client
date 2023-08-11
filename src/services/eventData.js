@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const GET_URL = 'http://localhost/projects/allevents/events/listEvents.php';
-const POST_URL = 'http://localhost/projects/allevents/events/createEvents.php';
+const GET_URL = 'http://localhost/projects/allevents/controllers/all-events.php';
+const POST_URL = 'http://localhost/projects/allevents/controllers/add-new-events.php';
 
 class eventService {
   static saveEvent(event) {

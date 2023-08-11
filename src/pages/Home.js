@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header';
-import Homesection from '../components/Homesection';
-import Grid from '../components/Grid';
+import Homesection from '../components/Body';
+import Grid from '../components/EventRow';
 import eventService from '../services/eventData';
 import { useEffect, useState } from 'react';
 
@@ -15,6 +15,7 @@ const Home = () => {
       .getEventList()
       .then((response) => {
         setEventList(response.data.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
