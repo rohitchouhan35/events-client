@@ -1,3 +1,32 @@
+
+https://loggerheaded-storie.000webhostapp.com/add-new-events.php 
+use this api to create new event -> for some reason the hosted party is not allowing to do post request 
+if you want to test it then have localhost setup for php and mysql and change the backend configuration acordingly and it will work fine
+
+json object: 
+{"banner_image"
+: 
+"ef",
+"category"
+: 
+"Fun",
+"description"
+: 
+"xyz event description",
+"end_time"
+: 
+"2023-08-25",
+"event_name"
+: 
+"Diwali",
+"location"
+: 
+"Vadodara",
+"start_time"
+: 
+"2023-08-19"}
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
