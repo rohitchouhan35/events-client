@@ -85,6 +85,14 @@
     .helper-text {
       font-size: 11px;
     }
+
+    .profile-picture {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
     
   }
   

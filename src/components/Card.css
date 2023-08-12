@@ -148,10 +148,6 @@
     padding-bottom: 100%; /* Maintain a square aspect ratio for the image */
   }
 
-  .info-section {
-    flex-direction: column; /* Stack info sections vertically */
-  }
-
   .date-info,
   .name-info {
     width: 100%; /* Take full width on small screens */

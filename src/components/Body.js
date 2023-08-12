@@ -66,6 +66,7 @@ const Body = ({ eventList, setFilteredEvents, setSearchQuery }) => {
           {/* <button className="search-button">Search</button> */}
         </div>
         <div className="search-options">
+        <div className='filter-section'>
           <label htmlFor="city">
             <select
               id="city"
@@ -96,6 +97,10 @@ const Body = ({ eventList, setFilteredEvents, setSearchQuery }) => {
             </select>
           </label>
 
+        </div>
+
+        <div className='cal'>
+
           <label htmlFor="date">
               <DatePicker
                 id="date"
@@ -109,6 +114,7 @@ const Body = ({ eventList, setFilteredEvents, setSearchQuery }) => {
             <button className="clear-filters-button" onClick={clearFilters}>
             Clear
             </button></label>
+            </div>
         </div>
       </div>
     </div>
