@@ -1,9 +1,12 @@
 import axios from 'axios';
 
-// const GET_URL = 'https://loggerheaded-storie.000webhostapp.com/all-events.php';
-// const POST_URL = 'https://loggerheaded-storie.000webhostapp.com/add-new-events.php';
-const GET_URL = 'http://localhost/allevents/list-all-events.php';
-const POST_URL = 'http://localhost/allevents/add-new-events.php';
+// const BASE_URL_HOSTED = "https://loggerheaded-storie.000webhostapp.com";
+// const GET_URL = BASE_URL_HOSTED + '/list-all-events.php';
+// const POST_URL = BASE_URL_HOSTED + '/add-new-events.php';
+
+const BASE_URL_LOCAL = "http://localhost/events-server-main";
+const GET_URL = BASE_URL_LOCAL + '/list-all-events.php';
+const POST_URL = BASE_URL_LOCAL + '/add-new-events.php';
 
 class eventService {
   

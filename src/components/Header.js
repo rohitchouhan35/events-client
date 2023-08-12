@@ -29,7 +29,7 @@ const Header = () => {
         <img className='profile-image' src={user.picture} alt={user.name} />
       </div>
       <div className='profile-details'>
-        <h2 className='profile-name'>{user.name}</h2>
+        {/* <h2 className='profile-name'>{user.name}</h2> */}
         <button onClick={handleCreate} className="create-event-button">Create Event</button>
       </div>
     </div>
