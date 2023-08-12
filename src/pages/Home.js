@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
-import Homesection from '../components/Body';
+import Body from '../components/Body';
 import Grid from '../components/EventRow';
 import eventService from '../services/eventData';
 import { useEffect, useState } from 'react';
@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Homesection eventList={eventList} setFilteredEvents={setFilteredEvents} setSearchQuery={setSearchQuery} />
+      <Body eventList={eventList} setFilteredEvents={setFilteredEvents} setSearchQuery={setSearchQuery} />
       <Grid eventList={filteredEvents} />
     </div>
   )

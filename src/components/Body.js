@@ -1,6 +1,8 @@
 import React from 'react';
 import './Body.css';
 import { useEffect, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {
   const image_url = 'https://www.showtimeevent.com/images/main-slider/event-management-company.webp';
@@ -23,23 +25,35 @@ const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {
 
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
-     
+  const [selectedDate, setSelectedDate] = useState(null);
+
   useEffect(() => {
     filterEvents();
-  }, [selectedCity, selectedCategory, eventList]);
+  }, [selectedCity, selectedCategory, selectedDate, eventList]);
 
   const filterEvents = () => {
-    const filtered =
-      selectedCity || selectedCategory
-        ? eventList.filter((event) => {
-            const cityMatch =
-              !selectedCity || event.location === selectedCity;
-            const categoryMatch =
-              !selectedCategory || event.category === selectedCategory;
-            return cityMatch && categoryMatch;
-          })
-        : eventList;
+    const filtered = eventList.filter((event) => {
+      const cityMatch = !selectedCity || event.location === selectedCity;
+      const categoryMatch = !selectedCategory || event.category === selectedCategory;
+  
+      const eventDate =
+        event.start_time && new Date(event.start_time.split('/').reverse().join('-'));
+        
+      const dateMatch =
+        !selectedDate ||
+        (!eventDate && false) ||
+        (eventDate && eventDate >= selectedDate);
+  
+      return cityMatch && categoryMatch && dateMatch;
+    });
+  
     setFilteredEvents(filtered);
+  };
+  
+  const clearFilters = () => {
+    setSelectedCity('');
+    setSelectedCategory('');
+    setSelectedDate(null);
   };
 
   return (
@@ -84,6 +98,21 @@ const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {
               ))}
             </select>
           </label>
+
+          <label htmlFor="date">
+              <DatePicker
+                id="date"
+                selected={selectedDate}
+                onChange={(date) => setSelectedDate(date)}
+                dateFormat="dd-MM-yyyy"
+                placeholderText="Select a date"
+              />
+            </label>
+            <label>
+            <button className="clear-filters-button" onClick={clearFilters}>
+            Clear
+            </button></label>
+
         </div>
       </div>
     </div>
