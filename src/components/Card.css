@@ -138,20 +138,20 @@
   background-color: #3c2994;
 }
 
-/* Media query for portrait view */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .event-card {
-    width: 100%; /* Make the card take the full width */
+    width: 100%; 
+    transition: none;
   }
 
   .event-image {
-    padding-bottom: 100%; /* Maintain a square aspect ratio for the image */
+    padding-bottom: 100%;
   }
 
   .date-info,
   .name-info {
-    width: 100%; /* Take full width on small screens */
-    margin-bottom: 10px; /* Add some spacing between info sections */
+    width: 100%; 
+    margin-bottom: 10px;
   }
 
   .card-modal-content {

@@ -79,7 +79,7 @@
     display: contents;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     .search-bar {
       width: 90%;
       padding: 10px;

@@ -43,7 +43,7 @@ const Home = () => {
         <Grid eventList={filteredEvents} />
       ) : (
         <p style={{ textAlign: 'center', margin: '20px' }}>
-          No events matched your search.
+          No events to display.
         </p>
       )}
     </div>
