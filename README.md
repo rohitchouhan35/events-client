@@ -18,3 +18,8 @@ make folder with name events-client. then follow these three steps
 make sure the application run on" http://localhost:3000"
 
 # this is deployed link just for frontend: [events-server(https://eventsaroundyou.netlify.app/)]
+
+
+
+[![Video demo]]([video_url](https://clipchamp.com/watch/yEQZmsAUKVg)https://clipchamp.com/watch/yEQZmsAUKVg)
+
