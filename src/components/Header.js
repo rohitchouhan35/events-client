@@ -34,13 +34,13 @@ const Header = () => {
       </div>
     </div>
   ) : (
-    <p>Please Sign in to create event.</p>
+    <p className='helper-text'>Please Sign in to create event.</p>
   )}
 </div>
 
         <div>
           {isAuthenticated ? (
-            <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+            <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} className="signin-button ">
               Sign Out
             </button>
           ) : (

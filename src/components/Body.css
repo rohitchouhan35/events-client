@@ -27,8 +27,9 @@
   z-index: 5;
 }
 
+
 .search-bar {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   margin: 10px auto;
   width: 800px;
@@ -70,6 +71,21 @@
   gap: 20px;
 }
 
+@media (max-width: 600px) {
+  .search-bar {
+    width: 90%;
+    padding: 10px;
+  }
+  
+  select {
+    max-width: 100%;
+  }
+
+  .search-options {
+    display: block;
+  }
+}
+
 label {
   font-weight: bold;
   color: #333;
@@ -81,7 +97,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
-  width: 100px;
+  width: 140px;
 }
 
 .clear-filters-button {

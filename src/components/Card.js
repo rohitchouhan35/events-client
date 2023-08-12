@@ -13,18 +13,22 @@ const Card = ({ event }) => {
     setImageError(true);
   };
 
+  const [showEditModal, setShowEditModal] = useState(false);
+  const handleEditButtonClick = () => {
+    setShowEditModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowEditModal(false);
+  };
+
   return (
+    <div className='card'>
     <div className="event-card">
       <div className="event-image">
         <img src={image_url} alt={event.event_name} onError={handleImageError} />
       </div>
       <div className="event-details">
-        {/* 
-        <div className="event-info">
-          <p>
-            <strong>End Date:</strong> {event.end_time}
-          </p>
-        </div> */}
 
         <div className='info-section'>
           <div className='date-info'>
@@ -40,10 +44,27 @@ const Card = ({ event }) => {
         </div>
 
         <div className='description-info'>
-        <p>{event.description}</p>
+          <button onClick={handleEditButtonClick}>View details</button>
         </div>
-        
       </div>
+
+    </div>
+          {showEditModal && (
+            <div className="card-modal scroll">
+              <div className="card-modal-content">
+                <span className="card-close" onClick={handleCloseModal}>
+                  &times;
+                </span>
+                <h2>{event.event_name}</h2>
+                <div className='card-modal-row'>
+                  <p>{event.description}</p>
+                </div>
+                <button className="btn">
+                  Buy ticket
+                </button>
+              </div>
+            </div>
+          )}
     </div>
   );
 };

@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Grid from '../components/EventRow';
 import eventService from '../services/eventData';
-import { useEffect, useState } from 'react';
 
 const Home = () => {
   const [eventList, setEventList] = useState([]);
-  const [filteredEvents, setFilteredEvents] = useState(eventList);
+  const [filteredEvents, setFilteredEvents] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -40,9 +39,15 @@ const Home = () => {
     <div>
       <Header />
       <Body eventList={eventList} setFilteredEvents={setFilteredEvents} setSearchQuery={setSearchQuery} />
-      <Grid eventList={filteredEvents} />
+      {filteredEvents.length > 0 ? (
+        <Grid eventList={filteredEvents} />
+      ) : (
+        <p style={{ textAlign: 'center', margin: '20px' }}>
+          No events matched your search.
+        </p>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

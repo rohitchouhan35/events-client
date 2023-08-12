@@ -4,24 +4,21 @@ import { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {
+const Body = ({ eventList, setFilteredEvents, setSearchQuery }) => {
   const image_url = 'https://www.showtimeevent.com/images/main-slider/event-management-company.webp';
 
-  const cityList = [
-    { id: 1, name: 'Ahmedabad' },
-    { id: 2, name: 'Vadodara' },
-    { id: 3, name: 'Surat' },
-    { id: 4, name: 'Gandhinagar' },
-    { id: 5, name: 'Delhi' },
-  ];
+  const uniqueCities = [...new Set(eventList.map(event => event.location))];
+  const uniqueCategories = [...new Set(eventList.map(event => event.category))];
 
-  const categoryList = [
-    { id: 1, name: 'Business' },
-    { id: 2, name: 'Tech' },
-    { id: 3, name: 'Parties' },
-    { id: 4, name: 'Workshops' },
-    { id: 5, name: 'Exhibitions' },
-  ];
+  const cityList = uniqueCities.map((city, index) => ({
+    id: index + 1,
+    name: city
+  }));
+
+  const categoryList = uniqueCategories.map((category, index) => ({
+    id: index + 1,
+    name: category
+  }));
 
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -112,11 +109,10 @@ const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {
             <button className="clear-filters-button" onClick={clearFilters}>
             Clear
             </button></label>
-
         </div>
       </div>
     </div>
   );
 };
 
-export default Homesection;
+export default Body;

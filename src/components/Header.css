@@ -9,19 +9,9 @@
     width: 100%;
 }
 
-@media (max-width: 600px) {
-  .header {
-    width: 300px;
-  }
-
-  .header-btn {
-    width: 100px;
-  }
-}
-
 .create-event-button {
     padding: 10px 20px;
-    margin-right: 30px;
+    margin-right: 20px;
     font-size: 1rem;
     color: #ffffff;
     background-color: #4fad19;
@@ -72,5 +62,29 @@
   .profile-name {
     margin: 0;
     margin-right: 30px;
+  }
+
+  @media (max-width: 600px) {
+
+    .header{
+      width: 100%;
+    }
+    .create-event-button {
+      font-size: 12px;
+      padding: 4px;
+      margin-right: 2px;
+    }
+
+    .signin-button {
+      font-size: 12px;
+      padding: 4px;
+      margin: 0px;
+      margin-right: 2px;
+    }
+
+    .helper-text {
+      font-size: 11px;
+    }
+    
   }
   
