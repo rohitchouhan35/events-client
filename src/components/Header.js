@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Header.css';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-  const { logout, loginWithRedirect, user, isAuthenticated, isLoading } = useAuth0();
+  const { logout, loginWithRedirect, user, isAuthenticated } = useAuth0();
   const navigate = useNavigate();
 
   const handleCreate = () => {
