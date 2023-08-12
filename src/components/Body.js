@@ -52,7 +52,7 @@ const Homesection = ({ eventList, setFilteredEvents, setSearchQuery }) => {
             placeholder="Search events"
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="search-button">Search</button>
+          {/* <button className="search-button">Search</button> */}
         </div>
         <div className="search-options">
           <label htmlFor="city">
