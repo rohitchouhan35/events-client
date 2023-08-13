@@ -20,5 +20,5 @@ make sure the application run on" http://localhost:3000"
 # this is deployed link just for frontend: [events-server(https://eventsaroundyou.netlify.app/)]
 
 
-# Video demo: youtube link (https://youtu.be/oft7PmvbBQc)
+# Video demo: youtube link (https://youtu.be/sMwDMHhc-gA)
 
